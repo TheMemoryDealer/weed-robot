@@ -7,4 +7,3 @@ Prologue: See ROScheatsheet.pdf for help, or google. http://wiki.ros.org/ROS/Tut
 
 `roslaunch video_stream_opencv camera.launch video_stream_provider:=/dev/video0 camera_name:=camera frame_id:=map
 `
-# Robot-Programming-CMP9767M
