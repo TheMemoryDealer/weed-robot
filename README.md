@@ -5,5 +5,21 @@ Prologue: See ROScheatsheet.pdf for help, or google. http://wiki.ros.org/ROS/Tut
 2. To run the simulator\
 `roslaunch uol_cmp9767m_base thorvald-sim.launch`
 
-`roslaunch video_stream_opencv camera.launch video_stream_provider:=/dev/video0 camera_name:=camera frame_id:=map
-`
+`roslaunch video_stream_opencv camera.launch video_stream_provider:=/dev/video0 camera_name:=camera frame_id:=map`\
+To see odometry info\
+`rostopic echo /thorvald_001/odometry/base_raw `\
+To see what camera is seeing\
+`rqt_image_view`
+# Start topo nav
+IF FIRST TIME USE do\
+`cd && mkdir mongodb`\
+Launch gazebo sim\
+`roslaunch uol_cmp9767m_base thorvald-sim.launch`\
+Launch move_base\
+`roslaunch uol_cmp9767m_tutorial move_base_topo_nav.launch`\
+Launch topological navigation\
+`roslaunch uol_cmp9767m_tutorial topo_nav.launch`\
+Load map into mongodb\
+`rosrun topological_utils load_yaml_map.py $(rospack find uol_cmp9767m_tutorial)/maps/test.yaml`\
+Launch rviz and have a demo\
+`rviz -d $(rospack find uol_cmp9767m_tutorial)/config/topo_nav.rviz`

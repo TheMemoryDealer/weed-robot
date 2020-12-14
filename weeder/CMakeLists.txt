@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.3)
-project(uol_cmp9767m_tutorial)
+cmake_minimum_required(VERSION 3.0.2)
+project(weeder)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -8,20 +8,8 @@ project(uol_cmp9767m_tutorial)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-## For DoDishesAction: uncomment the following lines
-  genmsg
-  actionlib_msgs
-  actionlib
-  geometry_msgs
-  nav_msgs
   rospy
-  rostest
   std_msgs
-  topological_navigation
-  uol_cmp9767m_base
-  roscpp
-  rospy
-  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -71,27 +59,18 @@ find_package(catkin REQUIRED COMPONENTS
 #   Service2.srv
 # )
 
-add_service_files(
-  FILES
-  AddTwoInts.srv
-)
-
 ## Generate actions in the 'action' folder
-## For DoDishesAction: uncomment the following lines
- add_action_files(
-   DIRECTORY
-   action
-   FILES
-   DoDishes.action
- )
+# add_action_files(
+#   FILES
+#   Action1.action
+#   Action2.action
+# )
 
 ## Generate added messages and services with any dependencies listed here
-## For DoDishesAction: uncomment the following lines
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  actionlib_msgs
-)
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -124,8 +103,8 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES uol_cmp9767m_tutorial
-#  CATKIN_DEPENDS geometry_msgs nav_msgs rospy rostest std_msgs uol_cmp9767m_base
+#  LIBRARIES weeder
+#  CATKIN_DEPENDS rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -142,7 +121,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/uol_cmp9767m_tutorial.cpp
+#   src/${PROJECT_NAME}/weeder.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -153,7 +132,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/uol_cmp9767m_tutorial_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/weeder_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -179,19 +158,23 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
- install(PROGRAMS
-    scripts/set_topo_nav_goal.py
-## For scripts using DoDishesAction: uncomment the following lines
-   scripts/do_dishes_server.py
-   scripts/do_dishes_client.py
-   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
- )
+# catkin_install_python(PROGRAMS
+#   scripts/my_python_script
+#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
 
-## Mark executables and/or libraries for installation
-# install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_node
+## Mark executables for installation
+## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
+# install(TARGETS ${PROJECT_NAME}_node
+#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
+
+## Mark libraries for installation
+## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_libraries.html
+# install(TARGETS ${PROJECT_NAME}
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
 # )
 
 ## Mark cpp header files for installation
@@ -208,18 +191,12 @@ include_directories(
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
 
-foreach (dir launch models config maps)
-    install(DIRECTORY ${dir}/
-    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
-endforeach(dir)
-
-
 #############
 ## Testing ##
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_uol_cmp9767m_tutorial.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_weeder.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
