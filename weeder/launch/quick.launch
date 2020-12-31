@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <include file="$(find uol_cmp9767m_base)/launch/thorvald-sim.launch" />
+  <include file="$(find uol_cmp9767m_tutorial)/launch/move_base_topo_nav.launch" />
+  <include file="$(find uol_cmp9767m_tutorial)/launch/topo_nav.launch" />
+
+  <node pkg="weeder" type="navigation.py" name="weeder" output="screen"/>
+
+</launch>
