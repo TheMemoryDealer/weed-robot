@@ -44,7 +44,7 @@ class image_projection:
         p_robot.pose.orientation.w = 1.0
         #specify a point on the ground just below the camera
         p_robot.pose.position.x = 0.45
-        p_robot.pose.position.y = 0.0
+        p_robot.pose.position.y = 0.4
         p_robot.pose.position.z = 0.0
         p_camera = self.tf_listener.transformPose('thorvald_001/kinect2_rgb_optical_frame', p_robot)
         print 'Point in the camera coordinates'

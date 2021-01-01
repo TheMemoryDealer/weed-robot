@@ -18,6 +18,8 @@ class Navigation:
         waypoints = ['Easy_1_start', 'Easy_1_finish', 'Easy_2_start', 'Easy_2_finish',
         'Medium_1_start', 'Medium_1_finish', 'Medium_2_start', 'Medium_2_finish',
         'Hard_1_start', 'Hard_1_finish', 'Hard_2_start', 'Hard_2_finish']
+        
+        ccounter = 0
 
         for waypoint in waypoints:
             self.goal.target = waypoint
@@ -28,23 +30,21 @@ class Navigation:
             # rospy.loginfo("result is %s", result)
             # print(Fore.RED + 'some red text') 
             # rospy.loginfo(Fore.RED + self.goal.target)
-            self.lane_dificulty_monitor()
-            self.lane_bound_monitor()
+            if('2_finish' in self.goal.target):
+                print('Plant env cleared! proceeding to next')
+                self.pub.publish('NA')
+                continue
+        
+            if ('Easy' in self.goal.target):
+                print('Current plant env: '+ Fore.GREEN + 'Easy')
+                self.pub.publish('Easy')
+            elif ('Medium' in self.goal.target):
+                print('Current plant env: '+ Fore.YELLOW + 'Medium')
+                self.pub.publish('Medium')
+            elif ('Hard' in self.goal.target):
+                self.pub.publish('Hard')
+                print('Current plant env: '+ Fore.RED + 'Hard')
 
-    def lane_dificulty_monitor(self):
-        if ('Easy' in self.goal.target):
-            print('Current plant env: '+ Fore.GREEN + 'Easy')
-            self.pub.publish('Easy')
-        elif ('Medium' in self.goal.target):
-            print('Current plant env: '+ Fore.YELLOW + 'Medium')
-            self.pub.publish('Medium')
-        elif ('Hard' in self.goal.target):
-            self.pub.publish('Hard')
-            print('Current plant env: '+ Fore.RED + 'Hard')
-
-    def lane_bound_monitor(self):
-        if ('2_finish' in self.goal.target):
-            print('Plant env cleared! proceeding to next')
             
 
 
