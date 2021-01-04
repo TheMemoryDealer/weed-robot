@@ -30,9 +30,8 @@ class Navigation:
             # rospy.loginfo("result is %s", result)
             # print(Fore.RED + 'some red text') 
             # rospy.loginfo(Fore.RED + self.goal.target)
-            if('2_finish' in self.goal.target):
-                print('Plant env cleared! proceeding to next')
-                self.pub.publish('NA')
+            if('finish' in self.goal.target):
+                self.pub.publish('N/A')
                 continue
         
             if ('Easy' in self.goal.target):

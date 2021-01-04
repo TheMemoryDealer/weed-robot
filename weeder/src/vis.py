@@ -1,21 +1,20 @@
 #! /usr/bin/env python
 import rospy
-import sys
-from std_srvs.srv import Empty
-from std_msgs.msg import Bool
+from std_msgs.msg import String
 from sensor_msgs.msg import Image
 import cv2
-from cv_bridge import CvBridge
+from cv_bridge import CvBridge, CvBridgeError
 import numpy as np
-from cv_bridge.core import CvBridgeError
 
 
 class Looker():
     
     def __init__(self):
         self.sub = rospy.Subscriber("/thorvald_001/kinect2_camera/hd/image_color_rect", Image, self.callback)
+        self.difSub = rospy.Subscriber('/crop_difficulty', String, self.difcallback)
+        self.difSwitch = ''
         self.pub = rospy.Publisher("/thorvald_001/kinect2_camera/hd/image_color_rect_filtered", Image, queue_size=1)
-        self.bridge = CvBridge() # Bridge used for converting msgs to cv2 image class
+        self.bridge = CvBridge()
 
     def callback(self, msg): # callback should decide which crop bot is looking at
         try:
@@ -23,8 +22,20 @@ class Looker():
         except CvBridgeError as err:
             print(err) 
             
-        img = self.mediumalgo(ogimage)
-        self.pub.publish(self.bridge.cv2_to_imgmsg(img, 'bgr8'))
+        if (self.difSwitch == 'Easy'):
+            self.pub.publish(self.bridge.cv2_to_imgmsg(self.easyalgo(ogimage), 'bgr8'))
+        elif (self.difSwitch == 'Medium'):
+            self.pub.publish(self.bridge.cv2_to_imgmsg(self.mediumalgo(ogimage), 'bgr8'))
+        elif (self.difSwitch == 'Hard'):
+            self.pub.publish(self.bridge.cv2_to_imgmsg(self.hardalgo(ogimage), 'bgr8'))
+        else:
+            self.pub.publish(self.bridge.cv2_to_imgmsg(ogimage, 'bgr8'))
+            
+        
+        
+        
+    def difcallback(self, data): # sets difficulty switch from subscribed data
+        self.difSwitch = data.data
         
         
         
@@ -40,8 +51,8 @@ class Looker():
         # weedmask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernelSize)
         weedimage = cv2.bitwise_and(HSVimage, HSVimage, mask=mask) 
         weedimage = cv2.cvtColor(weedimage, cv2.COLOR_HSV2BGR)
-        cv2.imshow("filtered", weedimage)
-        cv2.waitKey(1)
+        # cv2.imshow("filtered", weedimage)
+        # cv2.waitKey(1)
         return weedimage
         
     def easyalgo(self, image):
@@ -89,8 +100,8 @@ class Looker():
         indicesgreen = np.where(cropmask==255)
         image[indicesgreen[0], indicesgreen[1], :] = [0, 255, 0] # crop turns green
         im_with_keypoints = cv2.drawKeypoints(image, keypoints, np.array([]), (255,255,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        cv2.imshow("filtered", im_with_keypoints)
-        cv2.waitKey(1)
+        # cv2.imshow("filtered", im_with_keypoints)
+        # cv2.waitKey(1)
         return im_with_keypoints
 
         
