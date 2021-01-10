@@ -1,111 +1,19 @@
 - meta:
     map: test
-    node: Easy_1_start
+    node: WayPoint0
     pointset: test
   node:
     edges:
     - action: move_base
-      edge_id: Easy_1_start-Easy_1_finish
+      edge_id: WayPoint0_WayPoint3
       inflation_radius: 0.0
       map_2d: cropped
-      node: Easy_1_finish
+      node: WayPoint3
       recovery_behaviours_config: ''
-      top_vel: 0.20
+      top_vel: 0.55
     localise_by_topic: ''
     map: test
-    name: Easy_1_start
-    pointset: test
-    pose:
-      orientation:
-        w: 0.0
-        x: 0.0
-        y: 0.0
-        z: -1
-      position:
-        x: 5.7
-        y: -3.1
-        z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.2
-- meta:
-    map: test
-    node: Easy_1_finish
-    pointset: test
-  node:
-    edges:
-    - action: move_base
-      edge_id: Easy_1_finish-Easy_2_start
-      inflation_radius: 0.0
-      map_2d: cropped
-      node: Easy_2_start
-      recovery_behaviours_config: ''
-      top_vel: 0.20
-    localise_by_topic: ''
-    map: test
-    name: Easy_1_finish
-    pointset: test
-    pose:
-      orientation:
-        w: 0.0
-        x: 0.0
-        y: 0.0
-        z: -1
-      position:
-        x: -5.8
-        y: -3.0
-        z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.2
-- meta:
-    map: test
-    node: Easy_2_start
-    pointset: test
-  node:
-    edges:
-    - action: move_base
-      edge_id: Easy_2_start-Easy_2_finish
-      inflation_radius: 0.0
-      map_2d: cropped
-      node: Easy_2_finish
-      recovery_behaviours_config: ''
-      top_vel: 0.20
-    localise_by_topic: ''
-    map: test
-    name: Easy_2_start
+    name: WayPoint0
     pointset: test
     pose:
       orientation:
@@ -114,8 +22,8 @@
         y: 0.0
         z: 0.0
       position:
-        x: -5.8
-        y: -1.8
+        x: 0.0
+        y: 0.0
         z: 0.0
     verts:
     - x: 0.689999997616
@@ -138,25 +46,34 @@
     yaw_goal_tolerance: 0.2
 - meta:
     map: test
-    node: Easy_2_finish
+    node: WayPoint1
     pointset: test
   node:
     edges:
     - action: move_base
-      edge_id: Easy_2_finish-Easy_1_start
+      edge_id: WayPoint1_WayPoint0
       inflation_radius: 0.0
       map_2d: cropped
-      node: Easy_1_start
+      node: WayPoint0
       recovery_behaviours_config: ''
+      top_vel: 0.55
     - action: move_base
-      edge_id: Easy_2_finish-Medium_1_start
+      edge_id: WayPoint0_WayPoint4
       inflation_radius: 0.0
       map_2d: cropped
-      node: Medium_1_start
+      node: WayPoint4
       recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint0_WayPoint5
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: WayPoint5
+      recovery_behaviours_config: ''
+      top_vel: 0.55
     localise_by_topic: ''
     map: test
-    name: Easy_2_finish
+    name: WayPoint1
     pointset: test
     pose:
       orientation:
@@ -165,61 +82,7 @@
         y: 0.0
         z: 0.0
       position:
-        x: 5.8
-        y: -1.9
-        z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.2
-# NEXT CROP TYPE ------------------------------------------------------
-- meta:
-    map: test
-    node: Medium_1_start
-    pointset: test
-  node:
-    edges:
-    - action: move_base
-      edge_id: Medium_1_start-Medium_1_finish
-      inflation_radius: 0.0
-      map_2d: cropped
-      node: Medium_1_finish
-      recovery_behaviours_config: ''
-      top_vel: 0.20
-    - action: move_base
-      edge_id: Medium_1_start-Easy_2_finish
-      inflation_radius: 0.0
-      map_2d: cropped
-      node: Easy_2_finish
-      recovery_behaviours_config: ''
-      top_vel: 0.20
-    localise_by_topic: ''
-    map: test
-    name: Medium_1_start
-    pointset: test
-    pose:
-      orientation:
-        w: 0.0
-        x: 0.0
-        y: 0.0
-        z: 1
-      position:
-        x: 5.6
+        x: 5.0
         y: 0.0
         z: 0.0
     verts:
@@ -243,66 +106,34 @@
     yaw_goal_tolerance: 0.2
 - meta:
     map: test
-    node: Medium_1_finish
+    node: WayPoint2
     pointset: test
   node:
     edges:
     - action: move_base
-      edge_id: Medium_1_finish-Medium_2_start
+      edge_id: WayPoint2_WayPoint1
       inflation_radius: 0.0
       map_2d: cropped
-      node: Medium_2_start
+      node: WayPoint1
       recovery_behaviours_config: ''
-      top_vel: 0.20
-    localise_by_topic: ''
-    map: test
-    name: Medium_1_finish
-    pointset: test
-    pose:
-      orientation:
-        w: 0.0
-        x: 0.0
-        y: 0.0
-        z: 1
-      position:
-        x: -5.6
-        y: 0
-        z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.2
-- meta:
-    map: test
-    node: Medium_2_start
-    pointset: test
-  node:
-    edges:
+      top_vel: 0.55
     - action: move_base
-      edge_id: Medium_2_start-Medium_2_finish
+      edge_id: WayPoint2_WayPoint3
       inflation_radius: 0.0
       map_2d: cropped
-      node: Medium_2_finish
+      node: WayPoint3
       recovery_behaviours_config: ''
-      top_vel: 0.20
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint2_WayPoint5
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: WayPoint5
+      recovery_behaviours_config: ''
+      top_vel: 0.55
     localise_by_topic: ''
     map: test
-    name: Medium_2_start
+    name: WayPoint2
     pointset: test
     pose:
       orientation:
@@ -311,8 +142,8 @@
         y: 0.0
         z: 0.0
       position:
-        x: -5.57
-        y: 1
+        x: 5.0
+        y: 5.0
         z: 0.0
     verts:
     - x: 0.689999997616
@@ -335,27 +166,20 @@
     yaw_goal_tolerance: 0.2
 - meta:
     map: test
-    node: Medium_2_finish
+    node: WayPoint3
     pointset: test
   node:
     edges:
     - action: move_base
-      edge_id: Medium_2_finish-Medium_1_start
+      edge_id: WayPoint3_WayPoint4
       inflation_radius: 0.0
       map_2d: cropped
-      node: Medium_1_start
+      node: WayPoint4
       recovery_behaviours_config: ''
-      top_vel: 0.20
-    - action: move_base
-      edge_id: Medium_2_finish-Hard_1_start
-      inflation_radius: 0.0
-      map_2d: cropped
-      node: Hard_1_start
-      recovery_behaviours_config: ''
-      top_vel: 0.20
+      top_vel: 0.55
     localise_by_topic: ''
     map: test
-    name: Medium_2_finish
+    name: WayPoint3
     pointset: test
     pose:
       orientation:
@@ -364,62 +188,8 @@
         y: 0.0
         z: 0.0
       position:
-        x: 5.65
-        y: 1
-        z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.2
-# NEXT CROP TYPE ------------------------------------------------------
-- meta:
-    map: test
-    node: Hard_1_start
-    pointset: test
-  node:
-    edges:
-    - action: move_base
-      edge_id: Hard_1_start-Hard_1_finish
-      inflation_radius: 0.0
-      map_2d: cropped
-      node: Hard_1_finish
-      recovery_behaviours_config: ''
-      top_vel: 0.20
-    - action: move_base
-      edge_id: Hard_1_start-Medium_2_finish
-      inflation_radius: 0.0
-      map_2d: cropped
-      node: Medium_2_finish
-      recovery_behaviours_config: ''
-      top_vel: 0.20
-    localise_by_topic: ''
-    map: test
-    name: Hard_1_start
-    pointset: test
-    pose:
-      orientation:
-        w: 0.0
         x: 0.0
-        y: 0.0
-        z: 1
-      position:
-        x: 5.7
-        y: 3
+        y: 5.0
         z: 0.0
     verts:
     - x: 0.689999997616
@@ -442,66 +212,27 @@
     yaw_goal_tolerance: 0.2
 - meta:
     map: test
-    node: Hard_1_finish
+    node: WayPoint4
     pointset: test
   node:
     edges:
     - action: move_base
-      edge_id: Hard_1_finish-Hard_2_start
+      edge_id: WayPoint4_WayPoint0
       inflation_radius: 0.0
       map_2d: cropped
-      node: Hard_2_start
+      node: WayPoint0
       recovery_behaviours_config: ''
-      top_vel: 0.20
-    localise_by_topic: ''
-    map: test
-    name: Hard_1_finish
-    pointset: test
-    pose:
-      orientation:
-        w: 0.0
-        x: 0.0
-        y: 0.0
-        z: 1
-      position:
-        x: -5.7
-        y: 3
-        z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.2
-- meta:
-    map: test
-    node: Hard_2_start
-    pointset: test
-  node:
-    edges:
+      top_vel: 0.55
     - action: move_base
-      edge_id: Hard_2_start-Hard_2_finish
+      edge_id: WayPoint4_WayPoint2
       inflation_radius: 0.0
       map_2d: cropped
-      node: Hard_2_finish
+      node: WayPoint2
       recovery_behaviours_config: ''
-      top_vel: 0.20
+      top_vel: 0.55
     localise_by_topic: ''
     map: test
-    name: Hard_2_start
+    name: WayPoint4
     pointset: test
     pose:
       orientation:
@@ -510,8 +241,8 @@
         y: 0.0
         z: 0.0
       position:
-        x: -5.7
-        y: 4
+        x: 2.5
+        y: 2.5
         z: 0.0
     verts:
     - x: 0.689999997616
@@ -534,20 +265,27 @@
     yaw_goal_tolerance: 0.2
 - meta:
     map: test
-    node: Hard_2_finish
+    node: WayPoint5
     pointset: test
   node:
     edges:
     - action: move_base
-      edge_id: Hard_2_finish-Hard_1_start
+      edge_id: WayPoint5_WayPoint1
       inflation_radius: 0.0
       map_2d: cropped
-      node: Hard_1_start
+      node: WayPoint1
       recovery_behaviours_config: ''
-      top_vel: 0.20
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint5_WayPoint2
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: WayPoint2
+      recovery_behaviours_config: ''
+      top_vel: 0.55
     localise_by_topic: ''
     map: test
-    name: Hard_2_finish
+    name: WayPoint5
     pointset: test
     pose:
       orientation:
@@ -556,8 +294,8 @@
         y: 0.0
         z: 0.0
       position:
-        x: 5.8
-        y: 4.05
+        x: 7.5
+        y: 2.5
         z: 0.0
     verts:
     - x: 0.689999997616
@@ -578,4 +316,3 @@
       y: -0.287000000477
     xy_goal_tolerance: 0.3
     yaw_goal_tolerance: 0.2
-# BYE -------------------------------------------------------------------------------

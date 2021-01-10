@@ -1,0 +1,581 @@
+- meta:
+    map: test
+    node: Easy_1_start
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Easy_1_start-Easy_1_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Easy_1_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Easy_1_start
+    pointset: test
+    pose:
+      orientation:
+        w: 0.0
+        x: 0.0
+        y: 0.0
+        z: -1
+      position:
+        x: 5.7
+        y: -2.98
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Easy_1_finish
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Easy_1_finish-Easy_2_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Easy_2_start
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Easy_1_finish
+    pointset: test
+    pose:
+      orientation:
+        w: 0.0
+        x: 0.0
+        y: 0.0
+        z: -1
+      position:
+        x: -5.8
+        y: -3.0
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Easy_2_start
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Easy_2_start-Easy_2_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Easy_2_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Easy_2_start
+    pointset: test
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: -5.8
+        y: -1.8
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Easy_2_finish
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Easy_2_finish-Easy_1_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Easy_1_start
+      recovery_behaviours_config: ''
+    - action: move_base
+      edge_id: Easy_2_finish-Medium_1_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Medium_1_start
+      recovery_behaviours_config: ''
+    localise_by_topic: ''
+    map: test
+    name: Easy_2_finish
+    pointset: test
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: 5.8
+        y: -1.9
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+# NEXT CROP TYPE ------------------------------------------------------
+- meta:
+    map: test
+    node: Medium_1_start
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Medium_1_start-Medium_1_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Medium_1_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    - action: move_base
+      edge_id: Medium_1_start-Easy_2_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Easy_2_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Medium_1_start
+    pointset: test
+    pose:
+      orientation:
+        w: 0.0
+        x: 0.0
+        y: 0.0
+        z: 1
+      position:
+        x: 5.6
+        y: 0.0
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Medium_1_finish
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Medium_1_finish-Medium_2_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Medium_2_start
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Medium_1_finish
+    pointset: test
+    pose:
+      orientation:
+        w: 0.0
+        x: 0.0
+        y: 0.0
+        z: 1
+      position:
+        x: -5.6
+        y: 0
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Medium_2_start
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Medium_2_start-Medium_2_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Medium_2_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Medium_2_start
+    pointset: test
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: -5.57
+        y: 1
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Medium_2_finish
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Medium_2_finish-Medium_1_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Medium_1_start
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    - action: move_base
+      edge_id: Medium_2_finish-Hard_1_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Hard_1_start
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Medium_2_finish
+    pointset: test
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: 5.65
+        y: 1
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+# NEXT CROP TYPE ------------------------------------------------------
+- meta:
+    map: test
+    node: Hard_1_start
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Hard_1_start-Hard_1_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Hard_1_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    - action: move_base
+      edge_id: Hard_1_start-Medium_2_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Medium_2_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Hard_1_start
+    pointset: test
+    pose:
+      orientation:
+        w: 0.0
+        x: 0.0
+        y: 0.0
+        z: 1
+      position:
+        x: 5.7
+        y: 3
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Hard_1_finish
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Hard_1_finish-Hard_2_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Hard_2_start
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Hard_1_finish
+    pointset: test
+    pose:
+      orientation:
+        w: 0.0
+        x: 0.0
+        y: 0.0
+        z: 1
+      position:
+        x: -5.7
+        y: 3
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Hard_2_start
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Hard_2_start-Hard_2_finish
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Hard_2_finish
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Hard_2_start
+    pointset: test
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: -5.7
+        y: 4
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+- meta:
+    map: test
+    node: Hard_2_finish
+    pointset: test
+  node:
+    edges:
+    - action: move_base
+      edge_id: Hard_2_finish-Hard_1_start
+      inflation_radius: 0.0
+      map_2d: cropped
+      node: Hard_1_start
+      recovery_behaviours_config: ''
+      top_vel: 0.20
+    localise_by_topic: ''
+    map: test
+    name: Hard_2_finish
+    pointset: test
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: 5.8
+        y: 4.05
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.03
+    yaw_goal_tolerance: 0.02
+# BYE -------------------------------------------------------------------------------
