@@ -16,7 +16,7 @@ class Vision:
     
     def __init__(self):
         self.sub = rospy.Subscriber("/thorvald_001/kinect2_camera/hd/image_color_rect", Image, self.callback)
-        self.difSub = rospy.Subscriber('/crop_difficulty', String, self.difCallback)
+        self.difSub = rospy.Subscriber('/thorvald_001/crop_difficulty', String, self.difCallback)
         self.difSwitch = 'Easy'
         self.pub = rospy.Publisher("/thorvald_001/kinect2_camera/hd/image_color_rect_filtered", Image, queue_size=1)
         self.bridge = CvBridge()

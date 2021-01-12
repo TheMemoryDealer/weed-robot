@@ -27,7 +27,10 @@ Launch rviz and have a demo\
   <img src="/weeder/assets/topo/topo.png" width="400" />
   <img src="/weeder/assets/topo/topo2.png" width="400" /> 
 </p>
-There's 3 main segmentation funcs in /weeder/src/vision.py. Navigation node publishes crop type to topic crop_difficulty, which vision subscribes to and decides which segmentation algorithm to run.
+There's 3 main segmentation funcs in /weeder/src/vision.py. Navigation node publishes crop type to topic
+
+**thorvald_001/crop_difficulty**
+, which vision subscribes to and decides which segmentation algorithm to run.
 
 ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+) - easyAlgo(),\
 ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+) - mediumAlgo()\
@@ -45,7 +48,7 @@ Visualize with\
   <img src="/weeder/assets/weedseg/hard.png" width="250" />
 </p>
 
-output from */thorvald_001/kinect2_camera/hd/image_color_rect* ^^
+output from **/thorvald_001/kinect2_camera/hd/image_color_rect** ^^
 
 <p align="middle">
   <img src="/weeder/assets/weedseg/easy2.png" width="250" />
@@ -53,4 +56,4 @@ output from */thorvald_001/kinect2_camera/hd/image_color_rect* ^^
   <img src="/weeder/assets/weedseg/hard2.png" width="250" />
 </p>
 
-output from */thorvald_001/kinect2_camera/hd/image_color_rect_filtered* ^^
+output from **/thorvald_001/kinect2_camera/hd/image_color_rect_filtered** ^^

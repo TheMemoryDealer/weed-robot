@@ -12,7 +12,7 @@ class Navigation:
         self.client = actionlib.SimpleActionClient('/thorvald_001/topological_navigation', GotoNodeAction)
         self.client.wait_for_server()
         self.goal = GotoNodeGoal()
-        self.pub = rospy.Publisher('crop_difficulty', String, queue_size=1)
+        self.pub = rospy.Publisher('/thorvald_001/crop_difficulty', String, queue_size=1)
 
     def execute(self):
         waypoints = ['Easy_1_start', 'Easy_1_finish', 'Easy_2_start', 'Easy_2_finish',
