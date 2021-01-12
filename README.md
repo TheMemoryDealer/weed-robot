@@ -25,12 +25,12 @@ Launch rviz and have a demo\
 `rviz -d $(rospack find uol_cmp9767m_tutorial)/config/topo_nav.rviz`
 # Start vision
 <p align="middle">
-  <img src="/weeder/assets/weedseg/easy.png" width="300" />
-  <img src="/weeder/assets/weedseg/medium.png" width="300" /> 
-  <img src="/weeder/assets/weedseg/hard.png" width="300" />
+  <img src="/weeder/assets/weedseg/easy.png" width="250" />
+  <img src="/weeder/assets/weedseg/medium.png" width="250" /> 
+  <img src="/weeder/assets/weedseg/hard.png" width="250" />
 </p>
 <p align="middle">
-  <img src="/weeder/assets/weedseg/easy2.png" width="300" />
-  <img src="/weeder/assets/weedseg/medium2.png" width="300" /> 
-  <img src="/weeder/assets/weedseg/hard2.png" width="300" />
+  <img src="/weeder/assets/weedseg/easy2.png" width="250" />
+  <img src="/weeder/assets/weedseg/medium2.png" width="250" /> 
+  <img src="/weeder/assets/weedseg/hard2.png" width="250" />
 </p>
