@@ -23,3 +23,9 @@ Load map into mongodb\
 `rosrun topological_utils load_yaml_map.py $(rospack find weeder)/maps/map.yaml`\
 Launch rviz and have a demo\
 `rviz -d $(rospack find uol_cmp9767m_tutorial)/config/topo_nav.rviz`
+# Start vision
+<p align="middle">
+  <img src="/weeder/assets/easy2.png" width="100" />
+  <img src="/weeder/assets/medium2.png" width="100" /> 
+  <img src="/weeder/assets/hard2.png" width="100" />
+</p>

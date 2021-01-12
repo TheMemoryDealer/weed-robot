@@ -1,12 +1,15 @@
 #! /usr/bin/env python
 import rospy, image_geometry, cv2, sys, tf
-from std_msgs.msg import String
+from std_msgs.msg import String, Header
 from sensor_msgs.msg import Image, CameraInfo, PointCloud
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, Point32
 from cv_bridge import CvBridge, CvBridgeError
+from std_srvs.srv import Empty
 import numpy as np
 from colorama import Fore, Back, Style, init # this allows for color print to console
 init(autoreset=True) # dont remember the color
+import itertools
+
 
 class Vision:
     camera_model = None
@@ -19,6 +22,8 @@ class Vision:
         self.bridge = CvBridge()
         self.camera_info_sub = rospy.Subscriber('/thorvald_001/kinect2_camera/hd/camera_info', CameraInfo, self.cameraInfoCallback)
         self.tf_listener = tf.TransformListener()
+        self.pointcloud_publisher = rospy.Publisher("/my_pointcloud_topic", PointCloud, queue_size=1)
+        self.spray_method = rospy.ServiceProxy('/thorvald_001/spray', Empty)
 
     def callback(self, msg): # callback should decide which crop bot is looking at
         try:
@@ -76,14 +81,37 @@ class Vision:
         keypoints = detector.detect(weedmask)
         # Draw detected blobs as red circles. cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS ensures the size of the circle corresponds to the size of blob
         im_with_keypoints = cv2.drawKeypoints(image, keypoints, np.array([]), (255,255,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        pointarray = []
+        # pointarray = []
+        if(len(keypoints) != 0):
+            self.spray_method()
+
         for keyPoint in keypoints: # STOLEN FROM -> https://stackoverflow.com/a/37332802
             x = int(keyPoint.pt[0])
             y = int(keyPoint.pt[1])
-            s = keyPoint.size # diameter not area, might be useful later
-            print([int(x),int(y)])
-            a = self.pxToWorldFrame(int(x), int(y))
-            print(a)
+            d = int(keyPoint.size) # diameter not area, might be useful later
+            '''
+            Ok this is where we need to stop. If we keep calling local funcs 
+            from here it'll affect the FPS on the segmented image, that's no good.
+            We need to get whatever data we have out via publishing and have another 
+            node deal with it elsewhere.
+            '''
+            print([x,y])
+            #declaring pointcloud
+            my_awesome_pointcloud = PointCloud() # STOLEN FROM -> https://answers.ros.org/question/207071/how-to-fill-up-a-pointcloud-message-with-data-in-python/?answer=218951#post-id-218951
+            #filling pointcloud header
+            header = Header()
+            header.stamp = rospy.Time.now()
+            header.frame_id = str(b)
+            my_awesome_pointcloud.header = header
+            #filling some points
+            my_awesome_pointcloud.points.append(Point32(x, y, d))
+            #publish
+            self.pointcloud_publisher.publish(my_awesome_pointcloud)
+            # self.pixelPoints.append([int(x),int(y)])
+            # self.pixelPoints.sort()
+            # list(self.pixelPoints for self.pixelPoints,_ in itertools.groupby(self.pixelPoints))
+            # a = self.pxToWorldFrame(int(x), int(y))
+            # print(a)
             # print(a.pose.position.x)
             # print(a.pose.position.y)
             # print(a.pose.position.z)
