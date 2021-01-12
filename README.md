@@ -32,7 +32,6 @@ Launch rviz and have a demo\
 
 <p align="middle">
   <img src="/weeder/assets/weedseg/easy.png" width="250" />
-  rsdhg
   <img src="/weeder/assets/weedseg/medium.png" width="250" /> 
   <img src="/weeder/assets/weedseg/hard.png" width="250" />
 </p>
