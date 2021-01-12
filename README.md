@@ -27,12 +27,15 @@ Launch rviz and have a demo\
   <img src="/weeder/assets/topo/topo.png" width="400" />
   <img src="/weeder/assets/topo/topo2.png" width="400" /> 
 </p>
+There's 3 main segmentation funcs in /weeder/src/vision.py. Navigation node publishes crop type to topic crop_difficulty, which vision subscribes to and decides which segmentation algorithm to run.
+
+<span style="color:green">Green</span>-easyAlgo(),\
+<span style="color:yellow">Green</span>-mediumAlgo()\
+<span style="color:red">Green</span>-hardAlgo()
 
 # Start vision
-
-Start vission node\
-`rosrun weeder vision.py`
-
+Start vision node\
+`rosrun weeder vision.py`\
 Visualize with\
 `rqt_image_view`
 
