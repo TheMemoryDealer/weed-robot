@@ -50,6 +50,8 @@ Visualize with\
   <img src="/weeder/assets/weedseg/hard.png" width="250" />
 </p>
 
+      ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+) - easyAlgo(),
+
 output from **/thorvald_001/kinect2_camera/hd/image_color_rect** ^^
 
 <p align="middle">
