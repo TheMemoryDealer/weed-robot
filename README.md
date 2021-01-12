@@ -59,7 +59,7 @@ output from **/thorvald_001/kinect2_camera/hd/image_color_rect** ^^
   <img src="/weeder/assets/weedseg/hard2.png" width="250" />
 </p>
 
-           ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+) - easyAlgo() ^^         ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+) - mediumAlgo() ^^      ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) - hardAlgo() ^^
+       ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+) - easyAlgo() ^^     ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+) - mediumAlgo() ^^   ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) - hardAlgo() ^^
 
 
 output from **/thorvald_001/kinect2_camera/hd/image_color_rect_filtered** ^^
