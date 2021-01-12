@@ -27,7 +27,9 @@ Launch rviz and have a demo\
   <img src="/weeder/assets/topo/topo.png" width="400" />
   <img src="/weeder/assets/topo/topo2.png" width="400" /> 
 </p>
+
 # Start vision
+
 <p align="middle">
   <img src="/weeder/assets/weedseg/easy.png" width="250" />
   <img src="/weeder/assets/weedseg/medium.png" width="250" /> 
