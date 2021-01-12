@@ -1,4 +1,4 @@
-# CMP9767M
+# CMP9767M - WEEDER
 Prologue: See ROScheatsheet.pdf for help, or google. http://wiki.ros.org/ROS/Tutorials <- that's quite helpful too
 1. ALWAYS DO THIS FIRST\
 `sudo apt-get update && sudo apt-get upgrade`
@@ -34,7 +34,9 @@ There's 3 main segmentation funcs in /weeder/src/vision.py. Navigation node publ
 
 ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+) - easyAlgo(),\
 ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+) - mediumAlgo()\
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) - hardAlgo()
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) - hardAlgo()\
+![#000000](https://via.placeholder.com/15/f03c15/000000?text=+) - removeGround()\
+All 3 segmentation algos call removeGround() on start
 
 # Start vision
 Start vision node\
