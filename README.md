@@ -29,14 +29,19 @@ Launch rviz and have a demo\
 </p>
 
 # Start vision
-
+Start vission node\
+`rosrun weeder vision.py`
+Visualize with\
+`rqt_image_view`
 <p align="middle">
   <img src="/weeder/assets/weedseg/easy.png" width="250" />
   <img src="/weeder/assets/weedseg/medium.png" width="250" /> 
   <img src="/weeder/assets/weedseg/hard.png" width="250" />
 </p>
+output from */thorvald_001/kinect2_camera/hd/image_color_rect* ^^
 <p align="middle">
   <img src="/weeder/assets/weedseg/easy2.png" width="250" />
   <img src="/weeder/assets/weedseg/medium2.png" width="250" /> 
   <img src="/weeder/assets/weedseg/hard2.png" width="250" />
 </p>
+output from */thorvald_001/kinect2_camera/hd/image_color_rect_filtered* ^^
