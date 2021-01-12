@@ -25,7 +25,7 @@ Launch rviz and have a demo\
 `rviz -d $(rospack find uol_cmp9767m_tutorial)/config/topo_nav.rviz`
 # Start vision
 <p align="middle">
-  <img src="/weeder/assets/weedseg/easy2.png" width="100" />
-  <img src="/weeder/assets/weedseg/medium2.png" width="100" /> 
-  <img src="/weeder/assets/weedseg/hard2.png" width="100" />
+  <img src="/weeder/assets/weedseg/easy2.png" width="333" />
+  <img src="/weeder/assets/weedseg/medium2.png" width="333" /> 
+  <img src="/weeder/assets/weedseg/hard2.png" width="333" />
 </p>
