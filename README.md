@@ -29,9 +29,9 @@ Launch rviz and have a demo\
 </p>
 There's 3 main segmentation funcs in /weeder/src/vision.py. Navigation node publishes crop type to topic crop_difficulty, which vision subscribes to and decides which segmentation algorithm to run.
 
-<span style="color:green">Green</span>-easyAlgo(),\
-<span style="color:yellow">Green</span>-mediumAlgo()\
-<span style="color:red">Green</span>-hardAlgo()
+![#2bff36](https://via.placeholder.com/15/f03c15/000000?text=+) - easyAlgo(),\
+![#ffff2b](https://via.placeholder.com/15/f03c15/000000?text=+) - mediumAlgo()\
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) - hardAlgo()
 
 # Start vision
 Start vision node\
