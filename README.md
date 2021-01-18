@@ -10,7 +10,7 @@ To see odometry info\
 `rostopic echo /thorvald_001/odometry/base_raw `\
 To see what camera is seeing\
 `rqt_image_view`
-# Start topo nav
+# Start topological navigation
 IF FIRST TIME USE do\
 `cd && mkdir mongodb`\
 Launch gazebo sim\
