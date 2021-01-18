@@ -22,7 +22,9 @@ Launch topological navigation\
 Load map into mongodb\
 `rosrun topological_utils load_yaml_map.py $(rospack find weeder)/maps/map.yaml`\
 Launch rviz and have a demo\
-`rviz -d $(rospack find uol_cmp9767m_tutorial)/config/topo_nav.rviz`
+`rviz -d $(rospack find uol_cmp9767m_tutorial)/config/topo_nav.rviz`\
+Finally, do this to start moving\
+`rosrun weeder navigation.py`
 <p align="middle">
   <img src="/weeder/assets/topo/topo.png" width="400" />
   <img src="/weeder/assets/topo/topo2.png" width="400" /> 
