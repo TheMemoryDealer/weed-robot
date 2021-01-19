@@ -104,8 +104,8 @@ class Vision:
         keypoints = detector.detect(weedmask)
         # Draw detected blobs as red circles. cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS ensures the size of the circle corresponds to the size of blob
         im_with_keypoints = cv2.drawKeypoints(image, keypoints, np.array([]), (255,255,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        # if(len(keypoints) != 0): # super sophisticated spray method!!!
-        #     self.spray_method()
+        if(len(keypoints) != 0): # super sophisticated spray method!!!
+            self.spray_method()
         return im_with_keypoints, keypoints
     
     def processPoints(self, keypoints):
