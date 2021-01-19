@@ -1,4 +1,7 @@
 # CMP9767M - WEEDER
+![Alt Text](https://github.com/TheMemoryDealer/Robot-Programming-CMP9767M/blob/main/weeder/assets/FINAL.gif)
+
+
 ## Intro
 A simulation of the Thorvald weeding robot by Saga Robotics. The solution focuses on perception and attempts to identify and eliminate weeds amongst 3 distinct types of crop: young lettuce (denoted as easy ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+)), matured lettuce (denoted as medium ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+)) and onion (denoted as hard ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+))
 ## Prerequisites
