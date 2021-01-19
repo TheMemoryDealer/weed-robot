@@ -178,12 +178,12 @@ class Vision:
         
     def mediumAlgo(self, image):
         imagenoground = self.removeGround(image) # remove ground on start
-        HSVimage = cv2.cvtColor(imagenoground, cv2.COLOR_BGR2HSV) 
+        HSVimage = cv2.cvtColor(imagenoground, cv2.COLOR_BGR2HSV) # convert color space for thresholding
         # mask out crop
         min = np.array([033, 106, 165]) 
         max = np.array([126, 253, 255]) 
         mask = cv2.inRange(HSVimage, min, max) # threshold
-        mask = cv2.dilate(mask, np.ones((50, 50)))
+        mask = cv2.dilate(mask, np.ones((50, 50))) # expand mask
         mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, np.ones((50, 50))) # smoothen out mask
         mask = cv2.dilate(mask, np.ones((100, 100))) # expand mask
         cropimage = cv2.bitwise_and(HSVimage, HSVimage, mask=mask) # obtain threshold results
@@ -216,7 +216,7 @@ class Vision:
         mask = cv2.inRange(HSVimage, min, max) # threshold
         mask = cv2.dilate(mask, np.ones((19, 19))) # expand mask
         #  FROM -> https://stackoverflow.com/a/42812226
-        dummy_image=mask.astype(np.uint8) # reconvert to uint8
+        dummy_image = mask.astype(np.uint8) # reconvert to uint8
         #find all your connected components (white blobs in your image)
         nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(dummy_image, connectivity=8)
         #connectedComponentswithStats yields every seperated component with information on each of them, such as size
@@ -232,7 +232,7 @@ class Vision:
             if sizes[i] >= min_size:
                 mask_updated[output == i + 1] = 255
 
-        mask_updated=mask_updated.astype(np.uint8) # reconvert to uint8
+        mask_updated = mask_updated.astype(np.uint8) # reconvert to uint8
         
         cropimage = cv2.bitwise_and(HSVimage, HSVimage, mask=mask_updated) # obtain threshold results
         cropimage = cv2.cvtColor(cropimage, cv2.COLOR_HSV2BGR) # reconvert for presentation

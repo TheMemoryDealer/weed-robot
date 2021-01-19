@@ -6,12 +6,11 @@
   <include file="$(find uol_cmp9767m_tutorial)/launch/move_base_topo_nav.launch" />
   <include file="$(find uol_cmp9767m_tutorial)/launch/topo_nav.launch" />
 
-  <node pkg="weeder" type="vision.py" name="vision" output="screen"/>
-
   <node type="rviz" name="topo" pkg="rviz" args="rviz -d $( find weeder)/rviz/topo.rviz"/>
 
   <node type="rviz" name="pcl" pkg="rviz" args="rviz -d $( find weeder)/rviz/pcl.rviz"/>
 
   <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_debug" args="/thorvald_001/kinect2_camera/hd/image_color_rect_filtered"/>
+
 
 </launch>
