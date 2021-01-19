@@ -53,6 +53,8 @@ Visualize with\
 
 output from **/thorvald_001/kinect2_camera/hd/image_color_rect** ^^
 
+In the images below, crops are segmented as green, weeds are red.
+
 <p align="middle">
   <img src="/weeder/assets/weedseg/easy2.png" width="250" />
   <img src="/weeder/assets/weedseg/medium2.png" width="250" /> 
