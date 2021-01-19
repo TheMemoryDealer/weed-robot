@@ -1,9 +1,15 @@
 # CMP9767M - WEEDER
-![Alt Text](https://github.com/TheMemoryDealer/Robot-Programming-CMP9767M/blob/main/weeder/assets/FINAL.gif)
-
+<p align="center">
+  <img src="https://github.com/TheMemoryDealer/Robot-Programming-CMP9767M/blob/main/weeder/assets/FINAL.gif" width="1500" alt="animated" />
+</p>
 
 ## Intro
-A simulation of the Thorvald weeding robot by Saga Robotics. The solution focuses on perception and attempts to identify and eliminate weeds amongst 3 distinct types of crop: young lettuce (denoted as easy ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+)), matured lettuce (denoted as medium ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+)) and onion (denoted as hard ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+))
+A simulation of the Thorvald weeding robot by Saga Robotics. The solution focuses on perception and attempts to identify and eliminate weeds amongst 3 distinct types of crop:\
+young lettuce (denoted as easy ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+)),
+
+matured lettuce (denoted as medium ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+)),
+
+onion (denoted as hard ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)).
 ## Prerequisites
 * Ubuntu 18.04 and ROS Melodic\
 `http://wiki.ros.org/melodic/Installation/Ubuntu`
@@ -110,4 +116,14 @@ output from **/thorvald_001/kinect2_camera/hd/image_color_rect_filtered** ^^
 
 * World weed coordinates are obtained using everything learned in https://github.com/LCAS/CMP9767M/wiki/Workshop-4---Robot-Vision
 
-* 
+* World weed points are then published via Pointcloud \
+(https://answers.ros.org/question/207071/how-to-fill-up-a-pointcloud-message-with-data-in-python/?answer=218951#post-id-218951)
+
+## Known issues and future work
+* Camera to world transform is interfering with segmentation output, resulting in low output FPS. Future work should solve this by refactoring the code and moving transform/pointcloud functionality to a separate node.
+
+* Too many points are being published due to the same weed being registered again in a following frame. Extra functionality must somehow account for this.
+
+* Environment is predefined, meaning that the solution would require reinventing the topological map in a new environment. Ideally, Thorvald should learn to identify the rows, move along them and dynamically place topological points. Vision node should also be upgraded so that it is able to diferentiate between crops visually.
+
+* Thorvald still needs a proper spraying mechanism. Might be worth trying to merge in Josh's work (https://github.com/joshDavy1/CMP9767M)
