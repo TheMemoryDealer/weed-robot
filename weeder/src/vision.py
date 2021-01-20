@@ -65,7 +65,7 @@ class Vision:
     def removeGround(self, image):
         HSVimage = cv2.cvtColor(image, cv2.COLOR_BGR2HSV) # convert color space
         # between values for thresholding
-        min = np.array([43, 000, 000]) 
+        min = np.array([043, 000, 000]) 
         max = np.array([180, 253, 255]) 
         mask = cv2.inRange(HSVimage, min, max) # threshold
         cropimage = cv2.bitwise_and(HSVimage, HSVimage, mask=mask) # obtain threshold result
@@ -183,7 +183,6 @@ class Vision:
         min = np.array([033, 106, 165]) 
         max = np.array([126, 253, 255]) 
         mask = cv2.inRange(HSVimage, min, max) # threshold
-        mask = cv2.dilate(mask, np.ones((50, 50))) # expand mask
         mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, np.ones((50, 50))) # smoothen out mask
         mask = cv2.dilate(mask, np.ones((100, 100))) # expand mask
         cropimage = cv2.bitwise_and(HSVimage, HSVimage, mask=mask) # obtain threshold results

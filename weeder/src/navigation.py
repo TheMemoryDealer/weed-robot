@@ -34,7 +34,7 @@ class Navigation:
             continue seeing weeds for about 0.5 meters outside of the crop area due to FPS lag + camera
             rotation/position. To bypass that, we're saying hey Thor, imagine the weeds end 0.5 meters
             before the actual end of the row. It wont affect accuracy too much as your rotated camera
-            can still spot those weeds in the last few frames. Makes pointcloud map look a bit nice'''
+            can still spot those weeds in the last few frames. Makes pointcloud map look a bit nicer'''
             
             if('finish' in self.goal.target or '100' in self.goal.target): # no crop on end of rows
                 self.pub.publish('N/A')
