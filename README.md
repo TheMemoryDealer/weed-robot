@@ -51,6 +51,9 @@ replace lines 26,27 with:
     <arg name="x" value="5.7" />
     <arg name="y" value="-5.1" />
     ``` 
+* Change Marc's sprayer to spray where the camera is.\
+`cd CMP9767M-master/uol_cmp9767m_base/scripts && gedit sprayer.py`\
+change value in line 64 from -0.45 to 0.45.
 * Gazebo tips.\
 Restarting the simulation can be a pain. The process ***gzserver*** needs to be killed manually before attempting to reopen the simulator. The process can sometimes be stopped with `killall -9 gzserver`, but killing it through the *System Monitor* application works 100% of the time.
 
