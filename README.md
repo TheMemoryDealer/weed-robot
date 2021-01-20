@@ -4,7 +4,8 @@
 </p>
 
 ## Intro
-A simulation of the Thorvald weeding robot by Saga Robotics. The solution focuses on perception and attempts to identify and eliminate weeds amongst 3 distinct types of crop:\
+A simulation of the Thorvald weeding robot by Saga Robotics. The solution focuses on perception and attempts to identify and eliminate weeds amongst 3 distinct types of crop:
+
 young lettuce (denoted as easy ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+)),
 
 matured lettuce (denoted as medium ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+)),
