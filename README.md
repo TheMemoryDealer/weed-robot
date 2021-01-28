@@ -1,4 +1,7 @@
 # Robot-Programming-CMP9767M-WEEDER
+
+Presentation - https://docs.google.com/presentation/d/e/2PACX-1vRcM3YwEpgPuOn6K7g4dKhXwyWdaow8P1tj0ZeDh6KfWjMTBbrawXzMS8ApFqJJcnKcpDNbhMchF2-S/pub?start=false&loop=false&delayms=5000
+
 <p align="center">
   <img src="https://github.com/TheMemoryDealer/Robot-Programming-CMP9767M/blob/main/weeder/assets/FINAL.gif" width="1500" alt="animated" />
 </p>
