@@ -9,11 +9,11 @@ Presentation - https://docs.google.com/presentation/d/e/2PACX-1vRcM3YwEpgPuOn6K7
 ## Intro
 A simulation of the Thorvald weeding robot by Saga Robotics. The solution focuses on perception and attempts to identify and eliminate weeds amongst 3 distinct types of crop:
 
-young lettuce (denoted as easy ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+)),
+young lettuce (denoted as easy ![](https://via.placeholder.com/25x25/2bff36/2bff36.png)),
 
-matured lettuce (denoted as medium ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+)),
+matured lettuce (denoted as medium ![](https://via.placeholder.com/25x25/ffff2b/ffff2b.png)),
 
-onion (denoted as hard ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)).
+onion (denoted as hard ![](https://via.placeholder.com/25x25/f03c15/f03c15.png)).
 ## Prerequisites
 * Ubuntu 18.04 and ROS Melodic.\
 `http://wiki.ros.org/melodic/Installation/Ubuntu`
@@ -94,10 +94,12 @@ There are 3 main segmentation functions in /weeder/src/vision.py. Navigation nod
 **thorvald_001/crop_difficulty**
 , which vision subscribes to and decides which segmentation algorithm to run.
 
-![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+) - easyAlgo(),\
-![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+) - mediumAlgo()\
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) - hardAlgo()\
-![#000000](https://via.placeholder.com/15/000000/000000?text=+) - removeGround()\
+       ![](https://via.placeholder.com/25x25/2bff36/2bff36.png) - easyAlgo() ^^      ![](https://via.placeholder.com/25x25/ffff2b/ffff2b.png) - mediumAlgo() ^^        ![](https://via.placeholder.com/25x25/f03c15/f03c15.png) - hardAlgo() ^^
+
+![](https://via.placeholder.com/25x25/2bff36/2bff36.png) - easyAlgo(),\
+![](https://via.placeholder.com/25x25/ffff2b/ffff2b.png) - mediumAlgo()\
+![](https://via.placeholder.com/25x25/f03c15/f03c15.png) - hardAlgo()\
+![](https://via.placeholder.com/25x25/000000/000000.png) - removeGround()\
 All 3 segmentation algorithms call removeGround() on start.
 
 ## Start vision
@@ -123,7 +125,7 @@ In the images below, crops are segmented as green, weeds are red.
   <img src="/weeder/assets/weedseg/hard2.png" width="250" />
 </p>
 
-       ![#2bff36](https://via.placeholder.com/15/2bff36/000000?text=+) - easyAlgo() ^^      ![#ffff2b](https://via.placeholder.com/15/ffff2b/000000?text=+) - mediumAlgo() ^^        ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) - hardAlgo() ^^
+       ![](https://via.placeholder.com/25x25/2bff36/2bff36.png) - easyAlgo() ^^      ![](https://via.placeholder.com/25x25/ffff2b/ffff2b.png) - mediumAlgo() ^^        ![](https://via.placeholder.com/25x25/f03c15/f03c15.png) - hardAlgo() ^^
 
 
 output from **/thorvald_001/kinect2_camera/hd/image_color_rect_filtered** ^^
